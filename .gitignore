@@ -1,0 +1,7 @@
+# Ignore Python virtual environment
+env/
+
+# Ignore these files
+git_commands.md
+week_1/homework_1.png
+week_1/logfile_20230916171746
