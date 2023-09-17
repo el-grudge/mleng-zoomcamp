@@ -20,6 +20,6 @@ In my current role as a data analyst I spend most of my time in the first three 
 For week 1, our homework for involved:  
 * Installing Pandas, NumPy, Matplotlib, and Seaborn
 * Using pandas to read a data set, finding whether any of the columns had null values, filling those values, and calculating the mean
-* Using numpy to for matrix multiplication, transposing and inverting a matrix 
+* Using numpy for matrix multiplication, transposing and inverting a matrix 
 
 The code for homework 1 can be found [here](https://github.com/el-grudge/mleng-zoomcamp/blob/main/week_1/homework_1.py). 
