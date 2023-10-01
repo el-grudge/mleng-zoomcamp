@@ -10,7 +10,7 @@ We explore the data and analyze the relationships between the target variable an
 We measure the mutual dependence between categorical variables and the target variable using the mutual information score, which quantifies the amount of knowledge we can extract on one variable by observing another. For numerical variables, we use a correlation coefficient.
 
 1️⃣0️⃣🔒 Handling categorical variables
-We use one-hot encoding (OHE) to convert categorical variables to numerical ones. When using OHE, a single categorical variable of length "l" is transformed into a matrix of size "l" rows by n columns, where n is equalt to the number of unique categories, and values of either 0 or 1, corresponding to the existence of a category for a specific observation.
+We use one-hot encoding (OHE) to convert categorical variables to numerical ones. When using OHE, a single categorical variable of length "l" is transformed into a matrix of size "l" rows by n columns, where n is equal to the number of unique categories, and values of either 0 or 1, corresponding to the existence of a category for a specific observation.
 
 💡➕🧮 The Sigmoid function 
 We learn the difference between linear and logistic regression. Both are supervised linear models that calculate the sum of the bias term and the weighted features. However, they differ in their output, linear regression outputs a real number, whereas logistic regression passes the output of linear regression equation to the Sigmoid function to produce a number between 0 and 1.
