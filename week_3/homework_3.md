@@ -1,7 +1,7 @@
 In week 3️⃣ of the ML Zoomcamp we covered:
 
 📦✅❌ Churn prediction using logistic regression
-We use logistic regression to classify whether a telco customer would churn. This is a binary classification problem where the outcome is either 0 (not churning) or 1 (churning)
+We use logistic regression to classify whether a telcom customer would churn. This is a binary classification problem where the outcome is either 0 (not churning) or 1 (churning)
 
 🔦🔍📊 Feature importance
 We explore the data and analyze the relationships between the target variable and the various features within the dataset. We learn about churn rate, which is the difference between the means of the target variable and the categories of a given feature, and the risk ratio, which  uses ratio instead of difference to determine the churn likelihood of a given category. 
