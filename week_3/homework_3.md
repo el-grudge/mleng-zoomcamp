@@ -25,6 +25,6 @@ Our homework involved:
 * Finding the most frequent value of a categorical variable using the `value_counts()` function
 * Creating the correlation matrix and calculating the mutual information score
 * Training a logistic regression model and measuring it's accuracy
-* Determing feature importance using the feature elimination technique
+* Determining feature importance using the feature elimination technique
 
 The code for homework 3 can be found [here](https://github.com/el-grudge/mleng-zoomcamp/blob/main/week_3/homework_3.ipynb). 
