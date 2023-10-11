@@ -1,3 +1,10 @@
+## bank marketing
+
+https://archive.ics.uci.edu/static/public/222/data.csv
+
+
+## airfare regression 
+
 trying to understand how the business / economy data could be useful:
 
 business/economy data has a date value associated with the flight, all other information is avialable in clean dataset. additionally, more granularity could be added to the arrival / departure time features by adding the exact times (maybe a fligth that departs at 21:00 is more expensive than one that departs at 18:30 - even if both are classified as evening flights). remains to be seen. as a start, clean data should suffice
