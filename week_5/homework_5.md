@@ -8,7 +8,7 @@ We learn how to save and load a model created in a Jupytor notebook into a seria
 4- Use Docker to containerize system dependecies 
 5- Deploy the webservice into the cloud
 
-![Local Image](pictures/screenshot.png)
+<img src="pictures/screenshot.png" alt="alt_text" width="300" height="200" />
 
 🚀🌐💻 Create a production ready webservice application using Flask + Gunicorn 
 We learn about webservices and how Flask abstracts network calls such as GET and POST. We create a simple Flask app and how to use Python decorators to add GET / POST functionality to it. We also create an Flask app for our model so it can be used as a webservice. Finally, we deploy the prediction app using gunicorn
