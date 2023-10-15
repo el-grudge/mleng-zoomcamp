@@ -51,8 +51,8 @@ print(y_pred)
 import requests
 
 url = 'http://localhost:9696/predict'
-customer = client = {"job": "unknown", "duration": 270, "poutcome": "failure"}
-requests.post(url, json=customer).json()
+client = {"job": "unknown", "duration": 270, "poutcome": "failure"}
+requests.post(url, json=client).json()
 
 #%%
 # question 5
@@ -68,3 +68,13 @@ data = [re.split('\s{2,}', line) for line in docker_images.split('\n')]
 df = pd.DataFrame(data[1:], columns=data[0])
 
 print(df[df.REPOSITORY=='svizor/zoomcamp-model'].SIZE.values[0])
+
+#%%
+# question 6
+import requests
+
+url = 'http://0.0.0.0:9696/predict'
+client = {"job": "retired", "duration": 445, "poutcome": "success"}
+response = requests.post(url, json=client).json()
+
+print(response)
