@@ -1,7 +1,7 @@
 #%%
+# question 1
 from subprocess import getoutput
 
-# question 1
 pipenv_version = getoutput("pipenv --version")
 print(pipenv_version)
 
@@ -45,3 +45,26 @@ X = dv.transform([client])
 y_pred = model.predict_proba(X)[0, 1]
 
 print(y_pred)
+
+#%%
+# question 4
+import requests
+
+url = 'http://localhost:9696/predict'
+customer = client = {"job": "unknown", "duration": 270, "poutcome": "failure"}
+requests.post(url, json=customer).json()
+
+#%%
+# question 5
+import os
+import re
+import pandas as pd
+
+os.system("docker pull svizor/zoomcamp-model:3.10.12-slim")
+docker_images = getoutput("docker images")
+
+data = [re.split('\s{2,}', line) for line in docker_images.split('\n')]
+
+df = pd.DataFrame(data[1:], columns=data[0])
+
+print(df[df.REPOSITORY=='svizor/zoomcamp-model'].SIZE.values[0])
