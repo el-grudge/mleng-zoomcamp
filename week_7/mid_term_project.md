@@ -3,6 +3,31 @@
 https://archive.ics.uci.edu/static/public/222/data.csv
 
 
+0 - campaign didn't succeed in converting customer 
+
+1 - campaign did succeed in converting customer 
+
+when the model mistakenly predicts 0 instead of 1 it's a missed opportunity for the bank to make a profit 
+when the model mistakenly predicts 1 instead of 0 it's money lost by the bank
+
+precision: tp / (tp + fp) "Of all the instances the model labeled as positive, how many were actually positive?"
+recall: tp / (tp + fn) "Of all the instances that were actually positive, how many did the model correctly identify?"
+
+1- data prep
+2- basic model definition 
+3- basic model evaluation 
+	1- measure all metrics 
+	2- plot confusion matrix  
+	3- decide on model
+4- hyperparameter tuning 
+	1- threshold
+	2- model specific parameters
+5- assess on test
+6- deploy
+7- streamlit 
+	
+
+
 ## airfare regression 
 
 trying to understand how the business / economy data could be useful:
