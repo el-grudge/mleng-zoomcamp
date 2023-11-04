@@ -24,6 +24,9 @@ recall: tp / (tp + fn) "Of all the instances that were actually positive, how ma
 	2- model specific parameters
 5- assess on test
 6- deploy
+	1- save file as pickle 
+	2- deploy using flask 
+	3- deploy using docker
 7- streamlit 
 	
 
