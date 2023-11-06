@@ -1,50 +1,41 @@
-## bank marketing
+## Bank Marketing Problem Description
 
-https://archive.ics.uci.edu/static/public/222/data.csv
+In 2012 a Portuguese banking institution collected data for several direct marketing campaigns it conducted in order to analyze it and to build machine learning models that can increase the efficiency of future marketing campaigns.
 
+A marketing campaign is a concentrated effort by the bank in which it contacts its customers by phone and asks them to subscribe to a term deposit. Term deposits, aka certificate depoists, are deposits by customers that are made for a specific period of time and tradionally return more interest than savings accounts. They provide a guarantee for the banks that the money will remain available for a known period of time, which helps them better manage their available capitol.
 
-0 - campaign didn't succeed in converting customer 
+In this project, I'll be using the this dataset which can be downloaded from the UCI repository [here](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 
-1 - campaign did succeed in converting customer 
+My goal is to train an ML model that can predict whether a customer will subscribe to a term deposit. I'll priortize profit making over regulating spending. In other words, I'll prefer a model with a lower false negative rate over one with a lower false positive rate. 
 
-when the model mistakenly predicts 0 instead of 1 it's a missed opportunity for the bank to make a profit 
-when the model mistakenly predicts 1 instead of 0 it's money lost by the bank
+The dataset has 16 features, and one target variable: 
 
-precision: tp / (tp + fp) "Of all the instances the model labeled as positive, how many were actually positive?"
-recall: tp / (tp + fn) "Of all the instances that were actually positive, how many did the model correctly identify?"
+| Variable Name | Role     | Type        | Demographic       | Description | Units | Missing Values |
+|---------------|----------|-------------|-------------------|-------------|-------|----------------|
+| age           | Feature  | Integer     | Age               |             |       | no             |
+| job           | Feature  | Categorical | Occupation        |             |       | no             |
+| marital       | Feature  | Categorical | Marital Status    |             |       | no             |
+| education     | Feature  | Categorical | Education Level   |             |       | no             |
+| default       | Feature  | Binary      |                   | has credit in default? | | no |
+| balance       | Feature  | Integer     |                   | average yearly balance | euros | no |
+| housing       | Feature  | Binary      |                   | has housing loan? | | no |
+| loan          | Feature  | Binary      |                   | has personal loan? | | no |
+| contact       | Feature  | Categorical |                   | contact communication type (categorical: 'cellular','telephone') | | yes |
+| day_of_week   | Feature  | Date        |                   | last contact day of the week | | no |
+| month         | Feature  | Date        |                   | last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec') | | no |
+| duration      | Feature  | Integer     |                   | last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model. | | no |
+| campaign      | Feature  | Integer     |                   | number of contacts performed during this campaign and for this client (numeric, includes last contact) | | no |
+| pdays         | Feature  | Integer     |                   | number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted) | | yes |
+| previous      | Feature  | Integer     |                   | number of contacts performed before this campaign and for this client | | no |
+| poutcome      | Feature  | Categorical |                   | outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success') | | yes |
+| y             | Target   | Binary      |                   | has the client subscribed a term deposit? | | |:
 
-1- data prep
-2- basic model definition 
-3- basic model evaluation 
-	1- measure all metrics 
-	2- plot confusion matrix  
-	3- decide on model
-4- hyperparameter tuning 
-	1- threshold
-	2- model specific parameters
-5- assess on test
-6- deploy
-	1- save file as pickle 
-	2- deploy using flask 
-	3- deploy using docker
-7- streamlit 
-	
+Plan layout:  
+1- Data preparation  
+2- Exploratory data analysis  
+3- Feature Engineering / Transformations
+4- Model training and assessment  
 
-
-## airfare regression 
-
-trying to understand how the business / economy data could be useful:
-
-business/economy data has a date value associated with the flight, all other information is avialable in clean dataset. additionally, more granularity could be added to the arrival / departure time features by adding the exact times (maybe a fligth that departs at 21:00 is more expensive than one that departs at 18:30 - even if both are classified as evening flights). remains to be seen. as a start, clean data should suffice
-
-example record from clean data:
-Air_India	AI-868	Delhi	Evening	one	Early_Morning	Chennai	Business    13.33	4	45257
-
-extra features from business data:
-25-03-2022			18:00				07:20
+#### Running the code 
 
 
-next
-
-* look at mutual info score between categorical / price data (maybe convert price data to a categoircal one first)
-* look at correlation between numerical data (# of stops, duration, days left) and price - number of stops could be a tricky one since no distinction is made for flights with more than 2 stops  

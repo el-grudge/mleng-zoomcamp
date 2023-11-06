@@ -1,25 +1,27 @@
+import pandas as pd
+import json
 import pickle
 from flask import Flask
 from flask import request
 from flask import jsonify
+from utils import transform_data
 
-
-model_file = 'model_depth=20_samples_leaf=1.bin'
-
-print('model_file')
+model_file = 'model.bin'
 
 with open(model_file, 'rb') as f_in:
-    dv, model = pickle.load(f_in)
+    dv, data_transformer, model = pickle.load(f_in)
 
 app = Flask('convert')
 
 @app.route('/predict', methods=['POST'])
 def predict():
     customer = request.get_json()
+    customer = pd.DataFrame([customer])
 
-    X = dv.transform([customer])
+    X = data_transformer(customer)
+    X = dv.transform(X)
     y_pred = model.predict_proba(X)[0, 1]
-    convert = y_pred >= 0.5
+    convert = y_pred >= 0.25
 
     result = {
         'conversion_probability': float(y_pred),
@@ -27,6 +29,7 @@ def predict():
     }
 
     return jsonify(result)
+    
 
 
 if __name__ == "__main__":
