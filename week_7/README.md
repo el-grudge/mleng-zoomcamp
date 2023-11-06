@@ -36,7 +36,8 @@ Plan layout:
 3- Feature Engineering / Transformations  
 4- Model training and assessment   
 5- Deploy model using flask  
-6- Create a docker container image  
+6- Manage package dependency using Pipfile  
+7- Create a docker container image  
 
 
 #### Running the code 
