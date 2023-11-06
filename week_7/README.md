@@ -38,4 +38,10 @@ Plan layout:
 
 #### Running the code 
 
+You can run the docker image of the app using this command:  
 
+`docker run -it --rm -p 9696:9696 bank-marketing`  
+
+To test the app, run the following command in a separate terminal:  
+
+`python predict-test.py`
