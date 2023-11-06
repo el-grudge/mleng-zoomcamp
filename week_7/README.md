@@ -33,8 +33,11 @@ The dataset has 16 features, and one target variable:
 Plan layout:  
 1- Data preparation  
 2- Exploratory data analysis  
-3- Feature Engineering / Transformations
-4- Model training and assessment  
+3- Feature Engineering / Transformations  
+4- Model training and assessment   
+5- Deploy model using flask  
+6- Create a docker container image  
+
 
 #### Running the code 
 
