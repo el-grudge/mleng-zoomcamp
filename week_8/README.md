@@ -6,17 +6,17 @@ We explore Keras, an abstraction layer on top of TensorFlow that facilitates bui
 🧠 Convolutional Neural Network and Transfer Learning  
 We learn the intuition behind CNNs, a feed forward neural network architecture typically used for image classification (one famous implementation of CNNs is [AlexNet](https://en.wikipedia.org/wiki/AlexNet), which won the ImageNet challenge in 2012). CNNs have the following layers:
 
-* Convolution layer: Takes the image and scans it using special martrix-like filters for valuable features, which can be thought of as the basic structures - such as lines and curves - that make up an image. 
+* Convolution layer: Takes the image and scans it using special matrix-like filters for valuable features, which can be thought of as the basic structures - such as lines and curves - that make up an image. 
 * ReLU / Pooling layers: Introduces non-linearity to the network and trims down the dimension of the feature map. Non-linearity allows the network to learn the complex relations between the input (image) and output (class), while feature reduction decreases the complexity of the network to prevent overfitting.
-* Dense layer: Connects neurons from previous layers to output layer where logistic regression is used to classify the image. 
+* Dense layer: Connects neurons from previous layers to the output layer where logistic regression is used to classify the image. 
 
-One cool thing about neural networks is the transferability of their learning; a pretrained model can be used on a task different from the one it was originally trained for. For the fashion classification problem, we use the CONV layer of a pretrained Xception model, taking advantage of the features it learned when originally trained, and re-train the dense layer on the fashion images dataset.
+One cool thing about neural networks is that their learning can be transferred; a pretrained model can be used on a task different from the one it was originally trained for. For the fashion classification problem, we use the CONV layer of a pretrained Xception model, taking advantage of the features it learned when originally trained, and re-train the dense layer on the fashion images dataset.
 
 🔄 Learning Rate, Checkpointing, and More Layers  
 We discuss loss functions and how to tune the learning rate hyperparameter to minimize the loss value. We also cover callback functions and how to use them to create a saved copy of the trained model when it reaches certain thresholds. Then, we experiment with adding more layers to the model, a practice that can enhance the accuracy of a neural network.
 
 🔍 Dropout and Augmentation  
-We learn about dropout, a regularization technique that helps the model resist overfitting by keeping the connections of some active neurons while dropping the rest. We also learn how to introduce more variations and enlarge our training dataset by using different augmentation techniques.
+We learn about the dropout regularization technique, which helps the model resist overfitting by keeping the connections of some active neurons while dropping the rest. We also learn how to introduce more variations and enlarge our training dataset by using different augmentation techniques.
 
 📚 Our homework involved:  
 
