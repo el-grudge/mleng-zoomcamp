@@ -1,0 +1,1 @@
+In week 9️⃣ of the ML Zoomcamp we covered:
