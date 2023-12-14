@@ -40,3 +40,4 @@ xtx_inv = np.linalg.inv(xtx)
 y=np.array([950, 1300, 800, 1000, 1300])
 w=(xtx_inv@x.T)@y
 w[-1]
+
