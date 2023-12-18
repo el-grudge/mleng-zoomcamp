@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  location_classifier:
+    image: zoomcamp-capstone-model:xception-v4-002
+  gateway:
+    image: zoomcamp-capstone-gateway:002
+    environment:
+      - TF_SERVING_HOST=location_classifier:8500
+    ports:
+      - "9696:9696"
