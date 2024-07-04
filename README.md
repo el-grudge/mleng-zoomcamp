@@ -168,7 +168,7 @@ Message support and say "I'm enrolled in ML Zoomcamp" to get an upgrade.
 - 10.10 Explore more
 - 10.11 Homework
 
-## [Capstone Project 1](capstone_01/)
+## [Capstone Project 1](https://github.com/el-grudge/location-classifier/)
 
 Putting everything we've learned so far in practice one more time!
 
